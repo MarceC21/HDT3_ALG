@@ -12,16 +12,4 @@ public class InsertionSort implements Sorter {
             array[j + 1] = temp;
         }
     }
-
-    public static void main(String[] args) {
-        // Prueba del algoritmo con números aleatorios
-        Integer[] data = {5, 3, 8, 1, 2, 7, 4};
-        InsertionSort sorter = new InsertionSort();
-        sorter.sort(data);
-
-        // Mostrar resultado
-        for (int num : data) {
-            System.out.print(num + " ");
-        }
-    }
 }

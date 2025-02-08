@@ -4,18 +4,17 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
         int maxSize = 3000;  // Máximo de números a generar
-        String inputFile = "numeros.txt";  // Asegúrate de que coincida con Generador
         String outputFile = "sorted_numbers.txt"; // Archivo de salida donde se mostrarán los números ordenados
-        int size = 10; //Cantidad de números que va a ordenar
+        int size = 10; //Cantidad de números que va a ordenar, esto se puede modificar 
 
         // 1. Generar y guardar los números aleatorios
         Generador.generateNumbers();
         
-        // 3. Leer los números desde el archivo (leer todos pero usar el tamaño solicitado)
+        // 2. Leer los números desde el archivo (leer todos pero usar el tamaño solicitado)
         Integer[] nums = Reader.readNumbers(maxSize);  // Leer los 3000 números
         Integer[] numsToSort = new Integer[size];  // Crear un array para los números a ordenar
 
-        // Copiar los primeros 'size' números al nuevo array
+        // 3. Copiar los primeros 'size' números al nuevo array
         System.arraycopy(nums, 0, numsToSort, 0, size);
         
         // 4. Aplicar el algoritmo de ordenamiento (ejemplo con InsertionSort)

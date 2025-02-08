@@ -20,7 +20,4 @@ public class Reader {
         return numbers.toArray(new Integer[0]); // Convertimos a array de Integer
     }
 
-    public static void main(String[] args) {
-
-    }
 }
