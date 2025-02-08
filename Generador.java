@@ -20,7 +20,4 @@ public class Generador {
         }
     }
 
-    public static void main(String[] args) {
-        generateNumbers(); // Ejecuta la generación de números
-    }
 }
