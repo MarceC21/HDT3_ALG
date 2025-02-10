@@ -18,7 +18,7 @@ public class Main {
         System.arraycopy(nums, 0, numsToSort, 0, size);
         
         // 4. Aplicar el algoritmo de ordenamiento (ejemplo con InsertionSort)
-        InsertionSort sorter = new InsertionSort();
+        MergeSort sorter = new MergeSort();
         sorter.sort(numsToSort);
 
         // 5. Guardar los números ordenados en un archivo
