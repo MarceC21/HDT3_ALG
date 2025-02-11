@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         int maxSize = 3000;  // Máximo de números a generar
         String outputFile = "sorted_numbers.txt"; // Archivo de salida donde se mostrarán los números ordenados
-        int size = 10; //Cantidad de números que va a ordenar, esto se puede modificar 
+        int size = 10; //Cantidad de números que va a ordenar, esto se puede modificar
 
         // 1. Generar y guardar los números aleatorios
         Generador.generateNumbers();
@@ -18,8 +18,25 @@ public class Main {
         System.arraycopy(nums, 0, numsToSort, 0, size);
         
         // 4. Aplicar el algoritmo de ordenamiento (ejemplo con InsertionSort)
-        RadixSort sorter = new RadixSort();
+        //RadixSort sorter = new RadixSort();
+        //InsertionSort sorter = new InsertionSort();
+        //MergeSort sorter = new MergeSort();
+        QuickSort sorter = new QuickSort();
+
+
+        // Medir el tiempo antes de iniciar el ordenamiento
+        long startTime = System.currentTimeMillis();
+
+        // Ordenar
         sorter.sort(numsToSort);
+
+        // Medir el tiempo después de terminar el ordenamiento
+        long endTime = System.currentTimeMillis();
+
+        // Cálculo de la duración en milisegundos
+        long duration = endTime - startTime;
+        System.out.println("El algoritmo tardó " + duration + " ms en ordenar " + size + " números.");
+
 
         // 5. Guardar los números ordenados en un archivo
         saveSortedNumbers(outputFile, numsToSort);  // Ahora pasamos numsToSort
